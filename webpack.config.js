@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   devServer: {
     historyApiFallback: true,
@@ -27,6 +28,9 @@ module.exports = {
         loader: 'svg-inline-loader',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   plugins: [
     new HtmlWebPackPlugin({
